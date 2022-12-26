@@ -8,6 +8,11 @@ if(isset($_POST['id']) && isset($_POST['pass']) )  {
   $newpass= $_POST['pass'];
    $sql = "UPDATE account SET pass ='$newpass' WHERE id= '$id' ";
    $query=mysqli_query($conn,$sql);
+   if ($query) {
+      echo "success";
+   }else {
+     echo "invalid input";
+   }
 
 
 }
@@ -20,7 +25,7 @@ if(isset($_POST['id']) && isset($_POST['pass']) )  {
 
 
 
- //$result= mysqli_query($con,$sql) or die();
+
 
 
 

@@ -1,0 +1,41 @@
+<?php
+session_start();
+include("connection.php");
+include("signupprisoner.php");
+include("signupadmin.php");
+include("changepass.php");
+include("amalnama.php");
+$user_data=check_login($con);
+?>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Updating Pass</p>
+    <form class="box" action="changepass.php" method="post">
+      <div class="form-group">
+        <label for="exampleInputforprisoner">ID</label>
+        <input type="text" class="form-control" id="exampleInputforprisoner" name="id" id="PID" aria-describedby="20xx1xx" placeholder="Enter ">
+        <small id="orehVai" class="form-text text-muted">id deh vai</small>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputforprisoner">pass</label>
+        <input type="text" class="form-control" id="exampleInputforprisoner" name="type" aria-describedby="20xx1xx" placeholder="Enter ">
+        <small id="orehVai" class="form-text text-muted">ki pass</small>
+      </div>
+
+    <input type="submit"  name="submit" value="Submit">
+
+    </form>
+  </body>
+</html>

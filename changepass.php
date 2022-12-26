@@ -9,7 +9,7 @@ if(isset($_POST['id']) && isset($_POST['pass']) )  {
    $sql = "UPDATE account SET pass ='$newpass' WHERE id= '$id' ";
    $query=mysqli_query($conn,$sql);
    if ($query) {
-      echo "success";
+      echo "Pass Changed";
    }else {
      echo "invalid input";
    }
